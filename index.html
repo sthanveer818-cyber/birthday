@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="particles">
+        <label class="birthday-picker-label" for="birthdayInput">Her Birthday 🎂</label>
+        <input id="birthdayInput" class="name-input birthday-input" type="date"
+               aria-label="Her birthday">
+        </div>
+<button class="music" id="musicBtn" aria-label="Toggle music">♫</button>
+<audio id="bgMusic" loop preload="none"><source src="assets/music.mp3" type="audio/mpeg"></audio>
+
+<main>
+  <!-- PAGE 1 -->
+  <section class="page active opening" id="page1">
+    <div class="stars"></div>
+    <div class="opening-content">
+      <p class="eyebrow">A little surprise, made just for you</p>
+      <h1>Hey Beautiful <span>❤️</span></h1>
+      <p class="opening-text">Today isn't just another day...<br>It's the day the world became a little more beautiful.</p>
+      <div class="name-entry"><label for="herNameInput">Her name</label><input id="herNameInput" type="text" placeholder="Enter her name" autocomplete="off" maxlength="40">
+        <input id="yourNameInput" class="name-input" type="text"
+               placeholder="Enter your name ❤️" maxlength="40" autocomplete="name"
+               aria-label="Your name">
+        <p class="name-error" id="nameError">Please enter her name ❤️</p></div><button class="primary next" data-next="2">Open Your Surprise <span>✨</span></button>
+    </div>
+    <div class="scroll-hint">click to begin ↓</div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page" id="page2">
+    <div class="page-inner hero">
+      <p class="eyebrow">For the girl who makes everything brighter</p>
+      <h2>Happy Birthday,<br><span>My Love ❤️</span></h2>
+      <p class="lead">Out of all the people in this world, I'm grateful that somehow our paths crossed.</p>
+      <label class="hero-photo photo-frame upload-frame"><input class="photo-upload" data-slot="hero" type="file" accept="image/*"><img id="heroPhoto" src="assets/images/placeholder.svg" alt="Her photo"><span>Tap to upload your photo 📷</span><b class="upload-badge">＋ Choose Photo</b></label>
+      <button class="ghost next" data-next="3">Continue our story →</button>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page" id="page3">
+    <div class="page-inner">
+      <p class="eyebrow">A collection of moments</p>
+      <h2>Little Moments,<br><span>Big Memories</span></h2>
+      <p class="lead">Every picture holds a tiny piece of our story.</p>
+      <div class="gallery" id="gallery"></div>
+      <button class="ghost next" data-next="4">There is more ↓</button>
+    </div>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page" id="page4">
+    <div class="page-inner">
+      <p class="eyebrow">The moments that matter</p>
+      <h2>Our Little <span>Story</span></h2>
+      <div class="timeline" id="timeline"></div>
+      <button class="ghost next" data-next="5">Keep going ❤️</button>
+    </div>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section class="page" id="page5">
+    <div class="page-inner">
+      <p class="eyebrow">If I had to explain why...</p>
+      <h2>Things I Love<br><span>About You ❤️</span></h2>
+      <div class="reasons" id="reasons"></div>
+      <button class="primary next" data-next="6">One little secret 🤫</button>
+    </div>
+  </section>
+
+  <!-- PAGE 6 -->
+  <section class="page secret-page" id="page6">
+    <div class="page-inner center">
+      <p class="eyebrow">Okay... here's a secret</p>
+      <h2>Click if you want<br>to know it 🤫</h2>
+      <button class="secret-btn" id="secretBtn">Tell me the secret ❤️</button>
+      <div class="secret-message" id="secretMessage">
+        The secret is...<br><strong>I still fall for you a little more every single day. ❤️</strong>
+      </div>
+      <button class="ghost next hidden" id="secretNext" data-next="7">I think I'm ready for the next one →</button>
+    </div>
+  </section>
+
+  <!-- PAGE 7 -->
+  <section class="page" id="page7">
+    <div class="page-inner">
+      <p class="eyebrow">A scrapbook of us</p>
+      <h2>Moments I Want<br><span>To Keep Forever</span></h2>
+      <div class="collage" id="collage"></div>
+      <button class="ghost next" data-next="8">Almost at the end...</button>
+    </div>
+  </section>
+
+  <!-- PAGE 8 -->
+  <section class="page countdown-page" id="page8">
+    <div class="page-inner center">
+      <p class="eyebrow">And now...</p>
+      <h2>Counting down to<br><span>your special day 🎂</span></h2>
+      <div class="countdown" id="countdown"></div>
+      <p class="countdown-note">No matter what the clock says, you deserve to be celebrated every day.</p>
+      <button class="primary next" data-next="9">One last thing... ❤️</button>
+    </div>
+  </section>
+
+  <!-- PAGE 9 -->
+  <section class="page letter-page" id="page9">
+    <div class="page-inner center">
+      <p class="eyebrow">The part I really wanted you to see</p>
+      <h2>One Last <span>Thing...</span></h2>
+      <div class="envelope-wrap" id="envelope">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="seal">❤️</div>
+          <div class="envelope-label">Open this when you're ready</div>
+        </div>
+      </div>
+      <article class="letter hidden" id="letter"></article>
+      <button class="ghost restart" id="restart">Read it again ↺</button>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button id="closeLightbox">×</button>
+  <img id="lightboxImg" alt="">
+  <p id="lightboxCaption"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
